@@ -27,7 +27,8 @@ export const BlogPostCardInfo = ({
             <Link
               href={post?.href}
               passHref
-              className={`line-clamp-2 replace cursor-pointer text-2xl ${
+              // className={`line-clamp-2 replace cursor-pointer text-2xl ${
+              className={`line-clamp-2 replace cursor-pointer text-2xl font-bold ${
                 showPreview ? 'text-center' : ''
               } leading-tight font-normal text-gray-600 dark:text-gray-100 hover:text-indigo-700 dark:hover:text-indigo-400`}>
               {siteConfig('POST_TITLE_ICON') && (
@@ -74,6 +75,9 @@ export const BlogPostCardInfo = ({
             ))}
           </p>
         )}
+
+        {/* 在这里插入分割线 */}
+          <hr className="my-4 dark:border-gray-700" />
 
         {/* 预览 */}
         {showPreview && (
